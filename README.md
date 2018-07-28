@@ -8,15 +8,12 @@
 ![alt text](./assets/images/CompleteWorkout.png) -->
 
 <div width="100%">
-  <img  src="./assets/images/StartPage.png" width="210" title="hover text">
-  <img  src="./assets/images/WarmUp.png" width="210" title="hover text">
-  <img  src="./assets/images/SprintBeforeStart.png" width="210" title="hover text">
+  <img  src="./assets/images/StartPage.png" width="150" title="hover text">
+  <img  src="./assets/images/WarmUp.png" width="150" title="hover text">
+  <img  src="./assets/images/SprintBeforeStart.png" width="150" title="hover text">
+  <img  src="./assets/images/SprintAfterStart.png" width="150" title="hover text">
+  <img  src="./assets/images/CompleteWorkout.png" width="150" title="hover text">
 </div>
-  <img  src="./assets/images/StartPage.png" width="210" title="hover text">
-  <img  src="./assets/images/WarmUp.png" width="210" title="hover text">
-  <img  src="./assets/images/SprintBeforeStart.png" width="210" title="hover text">
-  <img  src="./assets/images/SprintAfterStart.png" width="300" title="hover text">
-  <img  src="./assets/images/CompleteWorkout.png" width="300" title="hover text">
 
 ## Available Scripts
 
