@@ -1,6 +1,18 @@
 
 # HIITTracker
 
+<!-- ![Start Page](./assets/images/StartPage.png)
+![alt text](./assets/images/WarmUp.png)
+![alt text](./assets/images/SprintBeforeStart.png)
+![alt text](./assets/images/SprintAfterStart.png)
+![alt text](./assets/images/CompleteWorkout.png) -->
+
+  <img  src="./assets/images/StartPage.png" width="210" title="hover text">
+  <img  src="./assets/images/WarmUp.png" width="210" title="hover text">
+  <img  src="./assets/images/SprintBeforeStart.png" width="210" title="hover text">
+  <img  src="./assets/images/SprintAfterStart.png" width="300" title="hover text">
+  <img  src="./assets/images/CompleteWorkout.png" width="300" title="hover text">
+
 ## Available Scripts
 
 Helpful script to run the project
