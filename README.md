@@ -7,6 +7,11 @@
 ![alt text](./assets/images/SprintAfterStart.png)
 ![alt text](./assets/images/CompleteWorkout.png) -->
 
+<div width="100%">
+  <img  src="./assets/images/StartPage.png" width="210" title="hover text">
+  <img  src="./assets/images/WarmUp.png" width="210" title="hover text">
+  <img  src="./assets/images/SprintBeforeStart.png" width="210" title="hover text">
+</div>
   <img  src="./assets/images/StartPage.png" width="210" title="hover text">
   <img  src="./assets/images/WarmUp.png" width="210" title="hover text">
   <img  src="./assets/images/SprintBeforeStart.png" width="210" title="hover text">
