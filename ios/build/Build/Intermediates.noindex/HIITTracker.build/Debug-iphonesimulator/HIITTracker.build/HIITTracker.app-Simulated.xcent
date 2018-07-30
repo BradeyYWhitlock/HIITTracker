@@ -6,7 +6,5 @@
 	<string>2NEDW357XQ.bradeywhitlock.HIITTracker</string>
 	<key>aps-environment</key>
 	<string>development</string>
-	<key>com.apple.developer.healthkit</key>
-	<true/>
 </dict>
 </plist>

@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Image, Picker, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import PushNotification from 'react-native-push-notification';
 import TimeFormatter from 'minutes-seconds-milliseconds';
-// import Sound from 'react-native-sound'
+import Sound from 'react-native-sound';
 import KeepAwake from 'react-native-keep-awake';
 
 
@@ -20,20 +20,22 @@ export default class StartPage extends React.Component {
         skipWarmup: false
     }
 
-
-    componentDidMount() {
-        // const sound = new Sound('https://sounds.com/release/6181/sound/878227', null, (error) => {
-        //     if (error) {
-        //         // do something
-        //     }
-
-        //     // play when loaded
-        //     sound.play();
-        // });
-
-        // if (this.props.warmUp) {
-        //     this.setState({ sets: this.state.sets + 1 })
-        // }
+    playSound = (sound) => {
+        var getReady = new Sound(sound, Sound.MAIN_BUNDLE, (error) => {
+            if (error) {
+                console.log('failed to load the sound', error);
+                return;
+            }
+            console.log('duration in seconds: ' + getReady.getDuration() + 'number of channels: ' + getReady.getNumberOfChannels());
+            getReady.play((success) => {
+                if (success) {
+                    console.log('successfully finished playing');
+                } else {
+                    console.log('playback failed due to audio decoding errors');
+                    getReady.reset();
+                }
+            });
+        });
     }
 
     startSprints() {
@@ -43,10 +45,15 @@ export default class StartPage extends React.Component {
         });
         this.setState({ restDuration: this.props.restDuration * 1000, sets: this.state.sets - 1, showStart: false })
         var sprintInterval = setInterval(() => {
-            this.setState({
-                sprintDuration: this.state.sprintDuration - 34
-            })
+            this.setState({ sprintDuration: this.state.sprintDuration - 34 })
+
+            console.log(this.state.sprintDuration);
+            if (this.state.sprintDuration < 3035 && this.state.sprintDuration > 3000 || this.state.sprintDuration < 2035 && this.state.sprintDuration > 2000 || this.state.sprintDuration < 1035 && this.state.sprintDuration > 1000) {
+                this.playSound('GetReady2.mp3');
+            }
+
             if (this.state.sprintDuration < 0) {
+                this.playSound('Finish.mp3');
                 this.setState({ sprintTime: false })
                 clearInterval(sprintInterval);
                 this.startRest();
@@ -58,10 +65,14 @@ export default class StartPage extends React.Component {
         KeepAwake.activate();
         this.setState({ showStart: false })
         var warmUpInterval = setInterval(() => {
-            this.setState({
-                warmUpDuration: this.state.warmUpDuration - 34
-            })
+            this.setState({ warmUpDuration: this.state.warmUpDuration - 34 })
+
+            if (this.state.warmUpDuration < 3035 && this.state.warmUpDuration > 3000 || this.state.warmUpDuration < 2035 && this.state.warmUpDuration > 2000 || this.state.warmUpDuration < 1035 && this.state.warmUpDuration > 1000) {
+                this.playSound('GetReady2.mp3');
+            }
+
             if (this.state.warmUpDuration < 0 || this.state.skipWarmup) {
+                this.playSound('RestOver.mp3')
                 this.setState({ warmUp: false })
                 clearInterval(warmUpInterval);
                 this.startSprints();
@@ -72,14 +83,19 @@ export default class StartPage extends React.Component {
     startRest() {
         this.setState({ sprintDuration: this.props.sprintDuration * 1000 })
         var restInterval = setInterval(() => {
-            this.setState({
-                restDuration: this.state.restDuration - 34
-            })
+            this.setState({ restDuration: this.state.restDuration - 34 })
+
+            if (this.state.restDuration < 3035 && this.state.restDuration > 3000 || this.state.restDuration < 2035 && this.state.restDuration > 2000 || this.state.restDuration < 1035 && this.state.restDuration > 1000) {
+                this.playSound('GetReady2.mp3');
+            }
+
             if (this.state.restDuration < 0) {
+                this.state.sets !== 0 && this.playSound('RestOver.mp3');
                 this.setState({ sprintTime: true })
                 clearInterval(restInterval);
 
                 if (this.state.sets === 0) {
+                    this.playSound('FinishWorkout.mp3')
                     this.setState({ complete: true })
                     return;
                 } else {

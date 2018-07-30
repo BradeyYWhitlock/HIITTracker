@@ -52,6 +52,18 @@
 		<data>
 		cm3FszBJmcHJ0Q0bkecXUXdTp4w=
 		</data>
+		<key>Finish.mp3</key>
+		<data>
+		l9EkGn501FOzT2ZGhpTln3pQzKE=
+		</data>
+		<key>FinishSprint.mp3</key>
+		<data>
+		kCoX9mQNreNUgM+8ewg0I0Nq8UE=
+		</data>
+		<key>FinishWorkout.mp3</key>
+		<data>
+		UobgzN+rHVSuMZ2qd+xS8LESbs0=
+		</data>
 		<key>Frameworks/IDEBundleInjection.framework/IDEBundleInjection</key>
 		<data>
 		8CN5cCzwKl0+7ieNPMN/SawZQA8=
@@ -93,13 +105,21 @@
 		<data>
 		DmGu9k7yBOLSfwtyNbn3zYir630=
 		</data>
+		<key>GetReady.mp3</key>
+		<data>
+		MWU3buo27OnuQn+JfxjZEqDRVfc=
+		</data>
+		<key>GetReady2.mp3</key>
+		<data>
+		cQQTrtCzvF7j8AYqPzLOmxAkoqk=
+		</data>
 		<key>HIIT Tracker Splash Page.png</key>
 		<data>
 		mZ3RUK8d4Pdeqyc73RAeHlm2c3w=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		DbBrelq0b2zI5XlGGxq9uq/jIBY=
+		SNgqZCDlB3yuRGqUuMklGoRhH0A=
 		</data>
 		<key>MutantAcademyBB.ttf</key>
 		<data>
@@ -128,6 +148,10 @@
 		<key>PlugIns/HIITTrackerTests.xctest/_CodeSignature/CodeResources</key>
 		<data>
 		UDyRqi5fRusC8K99T1E5Yw91Jts=
+		</data>
+		<key>RestOver.mp3</key>
+		<data>
+		Flyw9EQQCy+GzRakzWORYcc1uE4=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -264,6 +288,39 @@
 			9W9mhichUfmkd0AJlavVKETiVcomRE/T3pUBJKfhEOk=
 			</data>
 		</dict>
+		<key>Finish.mp3</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			l9EkGn501FOzT2ZGhpTln3pQzKE=
+			</data>
+			<key>hash2</key>
+			<data>
+			smWk/3KVvP8aEu8TNaxPK6yRDbSiWxKPFC5k9O+ARxk=
+			</data>
+		</dict>
+		<key>FinishSprint.mp3</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			kCoX9mQNreNUgM+8ewg0I0Nq8UE=
+			</data>
+			<key>hash2</key>
+			<data>
+			jg887ApMuGPZBOiPAsxhb12kBtxXZPcXkFl7zILervQ=
+			</data>
+		</dict>
+		<key>FinishWorkout.mp3</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			UobgzN+rHVSuMZ2qd+xS8LESbs0=
+			</data>
+			<key>hash2</key>
+			<data>
+			4Xg9q9C4B4h57+kToiFfUda2ahQYLhAX/mvLkp0Y5Ks=
+			</data>
+		</dict>
 		<key>Frameworks/IDEBundleInjection.framework/IDEBundleInjection</key>
 		<dict>
 			<key>hash</key>
@@ -365,6 +422,28 @@
 			2hnwNPgdaewT28DbTqe0Gpaccdc2akBF8IjnGtISc58=
 			</data>
 		</dict>
+		<key>GetReady.mp3</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			MWU3buo27OnuQn+JfxjZEqDRVfc=
+			</data>
+			<key>hash2</key>
+			<data>
+			jFhmZ4bA/Y7bgapdHFDxmajQuGvKx9fvV8CbcTPkWO4=
+			</data>
+		</dict>
+		<key>GetReady2.mp3</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			cQQTrtCzvF7j8AYqPzLOmxAkoqk=
+			</data>
+			<key>hash2</key>
+			<data>
+			9xPotVoREWWWXJ/vh7sS6PPNKUQXOCD3C/T47taYn+g=
+			</data>
+		</dict>
 		<key>HIIT Tracker Splash Page.png</key>
 		<dict>
 			<key>hash</key>
@@ -440,6 +519,17 @@
 			<key>hash2</key>
 			<data>
 			YK0jXAjZYIWeWilln00RBZ4WxekxC9Y/vSxGCLXzA3I=
+			</data>
+		</dict>
+		<key>RestOver.mp3</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Flyw9EQQCy+GzRakzWORYcc1uE4=
+			</data>
+			<key>hash2</key>
+			<data>
+			YFRwUzBc6s6iQL8mZ/YP131Ve6BA7lEi+12iwEaSwtw=
 			</data>
 		</dict>
 	</dict>

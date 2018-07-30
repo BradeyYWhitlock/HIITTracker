@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, Picker, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import CheckBox from 'react-native-check-box'
 import PushNotification from 'react-native-push-notification';
+import { PlaySound, StopSound, PlaySoundRepeat, PlaySoundMusicVolume } from 'react-native-play-sound';
 
 
 export default class StartPage extends React.Component {
@@ -14,7 +15,6 @@ export default class StartPage extends React.Component {
     }
 
     componentDidMount() {
-
         PushNotification.localNotification({
             message: 'hello'
         });
