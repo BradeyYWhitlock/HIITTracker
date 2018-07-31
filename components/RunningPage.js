@@ -47,13 +47,12 @@ export default class StartPage extends React.Component {
         var sprintInterval = setInterval(() => {
             this.setState({ sprintDuration: this.state.sprintDuration - 34 })
 
-            console.log(this.state.sprintDuration);
             if (this.state.sprintDuration < 3035 && this.state.sprintDuration > 3000 || this.state.sprintDuration < 2035 && this.state.sprintDuration > 2000 || this.state.sprintDuration < 1035 && this.state.sprintDuration > 1000) {
-                this.playSound('GetReady2.mp3');
+                this.props.sound === 'leadUp' && this.playSound('GetReady2.mp3');
             }
 
             if (this.state.sprintDuration < 0) {
-                this.playSound('Finish.mp3');
+                (this.props.sound === 'leadUp' || this.props.sound === 'startStop') && this.playSound('Finish.mp3');
                 this.setState({ sprintTime: false })
                 clearInterval(sprintInterval);
                 this.startRest();
@@ -68,11 +67,11 @@ export default class StartPage extends React.Component {
             this.setState({ warmUpDuration: this.state.warmUpDuration - 34 })
 
             if (this.state.warmUpDuration < 3035 && this.state.warmUpDuration > 3000 || this.state.warmUpDuration < 2035 && this.state.warmUpDuration > 2000 || this.state.warmUpDuration < 1035 && this.state.warmUpDuration > 1000) {
-                this.playSound('GetReady2.mp3');
+                this.props.sound === 'leadUp' && this.playSound('GetReady2.mp3');
             }
 
             if (this.state.warmUpDuration < 0 || this.state.skipWarmup) {
-                this.playSound('RestOver.mp3')
+                (this.props.sound === 'leadUp' || this.props.sound === 'startStop') && this.playSound('RestOver.mp3')
                 this.setState({ warmUp: false })
                 clearInterval(warmUpInterval);
                 this.startSprints();
@@ -86,16 +85,16 @@ export default class StartPage extends React.Component {
             this.setState({ restDuration: this.state.restDuration - 34 })
 
             if (this.state.restDuration < 3035 && this.state.restDuration > 3000 || this.state.restDuration < 2035 && this.state.restDuration > 2000 || this.state.restDuration < 1035 && this.state.restDuration > 1000) {
-                this.playSound('GetReady2.mp3');
+                this.props.sound === 'leadUp' && this.playSound('GetReady2.mp3');
             }
 
             if (this.state.restDuration < 0) {
-                this.state.sets !== 0 && this.playSound('RestOver.mp3');
+                (this.props.sound === 'leadUp' || this.props.sound === 'startStop') && this.state.sets !== 0 && this.playSound('RestOver.mp3');
                 this.setState({ sprintTime: true })
                 clearInterval(restInterval);
 
                 if (this.state.sets === 0) {
-                    this.playSound('FinishWorkout.mp3')
+                    (this.props.sound === 'leadUp' || this.props.sound === 'startStop') && this.playSound('FinishWorkout.mp3')
                     this.setState({ complete: true })
                     return;
                 } else {

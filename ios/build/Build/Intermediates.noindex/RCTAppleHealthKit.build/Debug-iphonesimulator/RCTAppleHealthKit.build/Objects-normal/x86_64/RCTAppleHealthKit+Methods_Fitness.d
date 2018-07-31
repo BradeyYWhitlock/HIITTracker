@@ -1,20 +1,17 @@
 dependencies: \
-  /Users/bwhitlock/HIITTracker/node_modules/react-native-apple-healthkit/RCTAppleHealthKit/RCTAppleHealthKit+Methods_Fitness.m \
-  /Users/bwhitlock/HIITTracker/node_modules/react-native-apple-healthkit/RCTAppleHealthKit/RCTAppleHealthKit+Methods_Fitness.h \
-  /Users/bwhitlock/HIITTracker/node_modules/react-native-apple-healthkit/RCTAppleHealthKit/RCTAppleHealthKit.h \
-  ../react-native/React/Base/RCTBridgeModule.h \
+  /Users/bwhitlock/HIITTracker/node_modules/rn-apple-healthkit/RCTAppleHealthKit/RCTAppleHealthKit+Methods_Fitness.m \
+  /Users/bwhitlock/HIITTracker/node_modules/rn-apple-healthkit/RCTAppleHealthKit/RCTAppleHealthKit+Methods_Fitness.h \
+  /Users/bwhitlock/HIITTracker/node_modules/rn-apple-healthkit/RCTAppleHealthKit/RCTAppleHealthKit.h \
+  /Users/bwhitlock/HIITTracker/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
   /Users/bwhitlock/HIITTracker/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
-  ../react-native/React/Base/RCTUtils.h \
-  /Users/bwhitlock/HIITTracker/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAssert.h \
-  ../react-native/React/Base/RCTLog.h \
   /Users/bwhitlock/HIITTracker/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTUtils.h \
-  /Users/bwhitlock/HIITTracker/node_modules/react-native-apple-healthkit/RCTAppleHealthKit/RCTAppleHealthKit+Queries.h \
-  /Users/bwhitlock/HIITTracker/node_modules/react-native-apple-healthkit/RCTAppleHealthKit/RCTAppleHealthKit+Utils.h \
-  ../react-native/React/Base/RCTBridge.h \
+  /Users/bwhitlock/HIITTracker/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAssert.h \
+  /Users/bwhitlock/HIITTracker/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTLog.h \
+  /Users/bwhitlock/HIITTracker/node_modules/rn-apple-healthkit/RCTAppleHealthKit/RCTAppleHealthKit+Queries.h \
+  /Users/bwhitlock/HIITTracker/node_modules/rn-apple-healthkit/RCTAppleHealthKit/RCTAppleHealthKit+Utils.h \
+  /Users/bwhitlock/HIITTracker/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTEventDispatcher.h \
+  /Users/bwhitlock/HIITTracker/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridge.h \
   /Users/bwhitlock/HIITTracker/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeDelegate.h \
   /Users/bwhitlock/HIITTracker/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTJavaScriptLoader.h \
-  /Users/bwhitlock/HIITTracker/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
   /Users/bwhitlock/HIITTracker/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTFrameUpdate.h \
-  /Users/bwhitlock/HIITTracker/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h \
-  ../react-native/React/Base/RCTEventDispatcher.h \
-  /Users/bwhitlock/HIITTracker/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridge.h
+  /Users/bwhitlock/HIITTracker/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h

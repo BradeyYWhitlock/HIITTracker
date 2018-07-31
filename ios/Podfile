@@ -7,4 +7,6 @@ target 'HIITTracker' do
 
   pod 'RNSound', :path => '../node_modules/react-native-sound'
 
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
 end

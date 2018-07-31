@@ -1,11 +1,13 @@
 import React from 'react';
-import { AlertIOS, AppState, Button, Picker, StyleSheet, Text, View } from 'react-native';
+import { AlertIOS, AppState, Button, Picker, SectionList, StyleSheet, Text, View } from 'react-native';
 import StartPage from './components/StartPage';
 import PushNotification from 'react-native-push-notification';
 import PushController from './components/PushController';
 import RunningPage from './components/RunningPage';
 import PushNotificationIOS from 'react-native'
 import AppleHealthKit from 'rn-apple-healthkit';
+import Icon from 'react-native-vector-icons/FontAwesome';
+import SettingsModal from './components/SettingsModal';
 
 export default class App extends React.Component {
 
@@ -19,32 +21,12 @@ export default class App extends React.Component {
     selectedRestDuration: 10,
     selectedSets: 2,
     start: true,
-    warmUp: false
+    warmUp: false,
+    sound: 'leadUp',
+    modalState: false
   }
 
   componentDidMount() {
-    // options = {
-    //   permissions: {
-    //     read: ["Height", "Weight", "StepCount", "DateOfBirth", "BodyMassIndex", "ActiveEnergyBurned"],
-    //     write: ["Height", "Weight", "StepCount", "BodyMassIndex", "Biotin", "Caffeine", "Calcium", "Carbohydrates", "Chloride", "Cholesterol", "Copper", "EnergyConsumed", "FatMonounsaturated", "FatPolyunsaturated", "FatSaturated", "FatTotal", "Fiber", "Folate", "Iodine", "Iron", "Magnesium", "Manganese", "Molybdenum", "Niacin", "PantothenicAcid", "Phosphorus", "Potassium", "Protein", "Riboflavin", "Selenium", "Sodium", "Sugar", "Thiamin", "VitaminA", "VitaminB12", "VitaminB6", "VitaminC", "VitaminD", "VitaminE", "VitaminK", "Zinc", "Water"]
-    //   }
-    // };
-
-    // AppleHealthKit.initHealthKit(options, (err, results) => {
-    //   if (err) {
-    //     console.log("error initializing Healthkit: ", err);
-    //     return;
-    //   }
-
-    //   // Height Example
-    //   AppleHealthKit.getDateOfBirth(null, (err, results) => {
-    //     if (this._handleHealthkitError(err, 'getDateOfBirth')) {
-    //       return;
-    //     }
-    //     console.log(results)
-    //   });
-
-    // });
     PushNotification.localNotification({
       message: 'lol'
     })
@@ -119,13 +101,36 @@ export default class App extends React.Component {
     this.setState({ warmUp: !this.state.warmUp })
   }
 
+  updateSoundSetting = (sound) => {
+    if (this.state.sound === sound) {
+      this.setState({ sound: '' })
+    } else {
+      this.setState({ sound: sound })
+    }
+  }
+
+  updateModal = () => {
+    this.setState({ modalState: !this.state.modalState })
+  }
+
   render() {
+
     return (
-      <View style={{ top: 0, bottom: 0, left: 0, right: 0, position: 'absolute' }}>
+      <View style={{ top: 0, bottom: 0, left: 0, right: 0, position: 'absolute', backgroundColor: '#292D3E' }}>
+        <Icon
+          name="cog"
+          size={30}
+          color="white"
+          style={{ alignSelf: 'flex-end', top: 30, right: 20, zIndex: 5 }}
+          onPress={() => {
+            this.updateModal();
+          }}
+        />
         {this.state.start ?
           <StartPage updateTimer={this.updateTimer} warmUp={this.state.warmUp} updateWarmUp={this.updateWarmUp} /> :
-          <RunningPage warmUp={this.state.warmUp} backToStart={this.backToStart} sprintDuration={this.state.selectedSprintDuration} restDuration={this.state.selectedRestDuration} sets={this.state.selectedSets} />
+          <RunningPage sound={this.state.sound} warmUp={this.state.warmUp} backToStart={this.backToStart} sprintDuration={this.state.selectedSprintDuration} restDuration={this.state.selectedRestDuration} sets={this.state.selectedSets} />
         }
+        <SettingsModal modalState={this.state.modalState} updateModal={this.updateModal} updateSoundSetting={this.updateSoundSetting} sound={this.state.sound} />
       </View>
     );
   }
