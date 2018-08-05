@@ -20,6 +20,10 @@ export default class StartPage extends React.Component {
         skipWarmup: false
     }
 
+    componentDidMount() {
+        Sound.setCategory('Playback', true)
+    }
+
     playSound = (sound) => {
         var getReady = new Sound(sound, Sound.MAIN_BUNDLE, (error) => {
             if (error) {

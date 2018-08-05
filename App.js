@@ -1,11 +1,8 @@
 import React from 'react';
 import { AlertIOS, AppState, Button, Picker, SectionList, StyleSheet, Text, View } from 'react-native';
 import StartPage from './components/StartPage';
-import PushNotification from 'react-native-push-notification';
 import PushController from './components/PushController';
 import RunningPage from './components/RunningPage';
-import PushNotificationIOS from 'react-native'
-import AppleHealthKit from 'rn-apple-healthkit';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import SettingsModal from './components/SettingsModal';
 
@@ -13,7 +10,6 @@ export default class App extends React.Component {
 
   constructor(props) {
     super(props)
-    this.handleAppStateChange = this.handleAppStateChange.bind(this)
   }
 
   state = {
@@ -26,62 +22,8 @@ export default class App extends React.Component {
     modalState: false
   }
 
-  componentDidMount() {
-    PushNotification.localNotification({
-      message: 'lol'
-    })
-  }
-
   componentWillMount() {
     console.disableYellowBox = true;
-    AppState.addEventListener('change', this.handleAppStateChange)
-    PushNotification.configure({
-
-      // (optional) Called when Token is generated (iOS and Android)
-      onRegister: function (token) {
-        console.log('TOKEN:', token);
-      },
-
-      // (required) Called when a remote or local notification is opened or received
-      onNotification: function (notification) {
-        console.log('NOTIFICATION:', notification);
-
-        // process the notification
-
-        // required on iOS only (see fetchCompletionHandler docs: https://facebook.github.io/react-native/docs/pushnotificationios.html)
-        // notification.finish(PushNotificationIOS.FetchResult.NoData);
-      },
-
-      // IOS ONLY (optional): default: all - Permissions to register.
-      permissions: {
-        alert: true,
-        badge: true,
-        sound: true
-      },
-
-      // Should the initial notification be popped automatically
-      // default: true
-      popInitialNotification: true,
-
-      /**
-        * (optional) default: true
-        * - Specified if permissions (ios) and token (android and ios) will requested or not,
-        * - if not, you must call PushNotificationsHandler.requestPermissions() later
-        */
-      requestPermissions: true,
-    });
-
-  }
-
-  componentWillUnmount() {
-    AppState.addEventListener('change', this.handleAppStateChange)
-  }
-
-  handleAppStateChange(appState) {
-    // console.log('app in background')
-    // PushNotification.localNotification({
-    //   message: 'hello'
-    // });
   }
 
   updateTimer = (sprintDuration, restDuration, sets) => {
